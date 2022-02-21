@@ -20,6 +20,7 @@ parser=OptionParser()
 parser.add_option("-n",dest="nPerJob",type="int",default=1,help="NUMBER of files processed per job",metavar="NUMBER")
 parser.add_option("-q","--flavour",dest="jobFlavour",type="str",default="workday",help="job FLAVOUR",metavar="FLAVOUR")
 parser.add_option("-p","--proxy",dest="proxyPath",type="str",default="noproxy",help="Proxy path")
+parser.add_option("-i",dest="listPath",type="str",default="list_cff",help="input list")
 
 opts, args = parser.parse_args()
 
@@ -63,21 +64,32 @@ process = cfo.process
 handle.close()
 
 # keep track of the original source
-fullSource = process.source.clone()
+
+package =  opts.listPath
+name = "inputFileNames"
+
+inputFileNames = getattr(__import__(package, fromlist=[name]), name)
+
+newsource = cms.Source("PoolSource",
+    fileNames = cms.untracked.vstring(inputFileNames),
+    inputCommands = cms.untracked.vstring('keep *')
+)
+#fullSource = process.source.clone()
+fullSource = newsource
 
 
 nJobs = -1
 
 try:
-    process.source.fileNames
+    newsource.fileNames
 except:
     print ('No input file. Exiting.')
     sys.exit(2)
 else:
-    print ("Number of files in the source:",len(process.source.fileNames), ":")
-    pprint.pprint(process.source.fileNames)
+    print ("Number of files in the source:",len(newsource.fileNames), ":")
+    pprint.pprint(newsource.fileNames)
    
-    nFiles = len(process.source.fileNames)
+    nFiles = len(newsource.fileNames)
     nJobs = int(nFiles / opts.nPerJob)
     if (nJobs!=0 and (nFiles % opts.nPerJob) > 0) or nJobs==0:
         nJobs = nJobs + 1
@@ -94,7 +106,8 @@ loop_mark = opts.nPerJob
 for i in range(0, nJobs):
     #print 'total: %d/%d  ;  %.1f %% processed '%(j,my_sum,(100*float(j)/float(my_sum)))
 
-    jobDir = MYDIR+'/Jobs/Job_%s/'%str(i)
+    #jobDir = MYDIR+'/Jobs/Job_%s/'%str(i)
+    jobDir = MYDIR+'/Jobs/'+opts.listPath+'/Job_%s/'%str(i)
     os.system('mkdir -p %s'%jobDir)
 
     tmp_jobname="sub_%s.sh"%(str(i))
@@ -142,7 +155,7 @@ condor_str += "output = $Fp(filename)hlt.stdout\n"
 condor_str += "error = $Fp(filename)hlt.stderr\n"
 condor_str += "log = $Fp(filename)hlt.log\n"
 condor_str += '+JobFlavour = "%s"\n'%opts.jobFlavour
-condor_str += "queue filename matching ("+MYDIR+"/Jobs/Job_*/*.sh)"
+condor_str += "queue filename matching ("+MYDIR+"/Jobs/%s/Job_*/*.sh)"%opts.listPath
 condor_name = MYDIR+"/condor_cluster.sub"
 condor_file = open(condor_name, "w")
 condor_file.write(condor_str)

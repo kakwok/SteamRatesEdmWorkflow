@@ -1,0 +1,16 @@
+inputFileNames=[
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/40D4146E-E003-6E41-9B8E-0A164B140BCA.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/667CFFF4-3D36-3E41-9AB3-C7CEAC022741.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/E75076B4-308F-6D42-B849-464BF36AC6D3.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/181F649B-EDBE-2046-8CC5-AA23D78CE377.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/6D926451-E49B-1A47-A593-2DE1B8ED739C.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/AE7FA589-F508-7E48-B690-86B707DD95F8.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/5D90E559-CF49-104C-BA0C-665E4D33260B.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/DB013C3C-F967-C74F-BB42-4DEEA67322DD.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/3385DE0E-23C9-F14A-A1F3-D7593E205578.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/F2D1C4F8-571B-9344-80B0-D0CD49D3AFE6.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/D427F7DC-D754-7A48-AA01-D122606C4A2F.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/10000/5A671AD3-9A00-D74C-A75E-E76C6FD63DCE.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/50000/F6401714-B076-F64F-8C04-7FC00FD5C7E1.root',
+'root://cmsxrootd.fnal.gov//store/mc/Run3Winter20DRPremixMiniAOD/HTo2LongLivedTo4b_MH-125_MFF-12_CTau-900mm_TuneCP5_14TeV_pythia8/GEN-SIM-RAW/110X_mcRun3_2021_realistic_v6-v2/50000/307C9ACF-FAB1-DA46-8C33-A11D87631CC3.root',
+]
