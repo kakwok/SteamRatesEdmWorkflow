@@ -4,13 +4,15 @@ from hlt_config import *
 # STEAM Customization #
 
 # Options
-nEvents=-1             # number of events to process
+nEvents=50             # number of events to process
 switchL1PS=False       # apply L1 PS ratios to switch to tighter column
 columnL1PS=1           # choose the tighter column ( 0 <=> tightest )
 outputName="hlt.root"  # output file name
+runMC = True
 
 # Input
 from list_cff import inputFileNames
+
 process.source = cms.Source("PoolSource",
     fileNames = cms.untracked.vstring(inputFileNames),
     inputCommands = cms.untracked.vstring('keep *')
@@ -65,12 +67,12 @@ process.hltOutput = cms.OutputModule( "PoolOutputModule",
          dataTier = cms.untracked.string( "RAW" )
      ),
      outputCommands = cms.untracked.vstring( 'drop *',
+         'keep *_genParticles_*_*',
+         'keep *_*RechitCluster*_*_*',
+         'keep *_*rechitCluster*_*_*',
          'keep edmTriggerResults_*_*_MYHLT',
          )
      )
 
 process.HLTOutput = cms.EndPath( process.hltOutput )
-if process.schedule_() != None:
-   process.schedule_().append(process.HLTOutput)
-
 
