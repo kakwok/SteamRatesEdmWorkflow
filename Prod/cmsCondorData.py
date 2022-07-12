@@ -127,8 +127,9 @@ for i in range(0, nJobs):
     tmp_job.write("cp -f %s* .\n"%(jobDir))
     tmp_job.write("cmsRun run_cfg.py\n")
     tmp_job.write("echo 'sending the file back'\n")
-    tmp_job.write("cp hlt.root %s/hlt_%s.root\n"%(remoteDir, str(i)))
-    tmp_job.write("rm hlt.root\n")
+    #tmp_job.write("cp hlt.root %s/hlt_%s.root\n"%(remoteDir, str(i)))
+    tmp_job.write("cp plots.root %s/plots_%s.root\n"%(remoteDir, str(i)))
+    tmp_job.write("cp output_reco.root %s/output_reco_%s.root\n"%(remoteDir, str(i)))
     tmp_job.close()
     os.system("chmod +x %s"%(jobDir+tmp_jobname))
 
